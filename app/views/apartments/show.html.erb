@@ -3,8 +3,8 @@
 <%= render @apartment %>
 
 <div>
-  <%= link_to "Edit this apartment", edit_apartment_path(@apartment) %> |
-  <%= link_to "Back to apartments", apartments_path %>
+  <%= link_to "Edit this apartment", edit_building_apartment_path(@building, @apartment) %> |
+  <%= link_to "Back to apartments", building_apartments_path(@building) %>
 
-  <%= button_to "Destroy this apartment", @apartment, method: :delete %>
+  <%#= button_to "Destroy this apartment", @apartment, method: :delete %>
 </div>

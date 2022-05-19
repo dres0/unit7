@@ -1,4 +1,4 @@
-<%= form_with(model: apartment) do |form| %>
+<%= form_with(model: [@building, apartment]) do |form| %>
   <% if apartment.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(apartment.errors.count, "error") %> prohibited this apartment from being saved:</h2>
@@ -14,11 +14,6 @@
   <div>
     <%= form.label :number, style: "display: block" %>
     <%= form.number_field :number %>
-  </div>
-
-  <div>
-    <%= form.label :building_id, style: "display: block" %>
-    <%= collection_select(:apartment, :building_id, Building.all, :id, :name) %>
   </div>
 
   <div>

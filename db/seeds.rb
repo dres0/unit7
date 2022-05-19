@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+5.times do |i|
+  Building.create(name: "Building #{i}")
+end
+
+50.times do |i|
+  Apartment.create(number: i, building_id: rand(1..5))
+end
