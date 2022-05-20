@@ -7,7 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 5.times do |i|
-  Building.create(name: "Building #{i}")
+  Building.create(name: "Edificio #{i+1}")
 end
 
 50.times do |i|
